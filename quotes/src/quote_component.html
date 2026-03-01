@@ -1,0 +1,16 @@
+<!-- NOTE: This file uses rust templating so it is very sensitive -->
+<!-- NOTE: I am hoping I can switch to Tera sometime but it doesn't target WASM -->
+<!-- NOTE: It also uses htmx, the file format may be misleading -->
+
+<!-- styles are deliberately not included so you are required to be creative -->
+<div class="quote-wrapper">
+  <h1>Some Quotes I Like</h1>
+  <div class="quote-container">
+    <p class="quote-body">
+      "{{body}}"
+    </p>
+    <p class="quote-attribution">
+      {{attribution}}
+    </p>
+  </div>
+</div>

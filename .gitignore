@@ -1,0 +1,6 @@
+build/
+.dev.vars
+wrangler.toml
+.wrangler
+Cargo.lock
+node_modules/

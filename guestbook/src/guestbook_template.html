@@ -1,0 +1,12 @@
+<form hx-post="/api/guestbook/sign"
+      hx-target="#messages"
+      hx-swap="afterbegin">
+  <input name="name">
+  <textarea name="message"></textarea>
+  <button type="submit">Post</button>
+</form>
+
+<div id="messages"
+     hx-get="/api/guestbook"
+     hx-trigger="load">
+</div>
