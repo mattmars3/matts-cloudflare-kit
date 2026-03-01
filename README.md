@@ -1,6 +1,9 @@
 # Matt's Cloudflare Kit
 Deploy these independent workers to easily add dynamic functionality to your static website.
 
+## Documentation
+Check out the docs at [mattmars3.github.io/matts-cloudflare-kit](https://mattmars3.github.io/matts-cloudflare-kit/)
+
 ## Current Widgets
 Top Tracks API - pulls your top tracks from the Spotify API.
 
