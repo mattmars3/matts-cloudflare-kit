@@ -1,4 +1,5 @@
 site_name: Matt's Cloudflare Toolkit
+site_url: https://mattmars3.github.io/matts-cloudflare-kit/
 theme:
   name: mkdocs
   color_mode: light
