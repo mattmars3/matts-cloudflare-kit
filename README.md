@@ -1,8 +1,6 @@
 # Matt's Cloudflare Kit
 Deploy these independent workers to easily add dynamic functionality to your static website.
 
-![Screenshot Example](docs/screenshot.png)
-
 ## Current Widgets
 Top Tracks API - pulls your top tracks from the Spotify API.
 
@@ -24,3 +22,7 @@ Picture Carousel - display some of your favorite pictures in an interactive caro
 Message in a Bottle - Read and Write a Message to a Stranger
 
 Live Polls & Graphs - interact with your audience about a specific topic
+
+## Screenshots
+<img src="docs/screenshot.png" width="300" alt="Screenshot Example">
+
