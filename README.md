@@ -1,7 +1,7 @@
-# MCK - Matt's Cloudflare Kit
+# Matt's Cloudflare Kit
 Deploy these independent workers to easily add dynamic functionality to your static website.
 
-![]
+![Screenshot Example](docs/screenshot.png)
 
 ## Current Widgets
 Top Tracks API - pulls your top tracks from the Spotify API.
