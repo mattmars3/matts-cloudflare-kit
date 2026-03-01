@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Matt's Cloudflare Toolkit</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Matt's Cloudflare Toolkit</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="api/" class="nav-link">API Docs</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="api/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#matts-cloudflare-kit" class="nav-link">Matt's Cloudflare Kit</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#api-documentation" class="nav-link">API Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#widgets" class="nav-link">Widgets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#planned-widgets" class="nav-link">Planned Widgets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation-and-setup" class="nav-link">Installation and Setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#spotify-top-tracks" class="nav-link">Spotify Top Tracks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#guestbook" class="nav-link">Guestbook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quotes" class="nav-link">Quotes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#screenshots" class="nav-link">Screenshots</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="matts-cloudflare-kit">Matt's Cloudflare Kit</h1>
+<p>Add some creative flair to your personal website without the headache of backend setup.</p>
+<p>See it live at <a href="https://mattmarsico.com/">mattmarsico.com</a></p>
+<h2 id="api-documentation"><a href="api/">API Documentation</a></h2>
+<p>Check out the available endpoints and examples responses.</p>
+<h2 id="widgets">Widgets</h2>
+<ul>
+<li>
+<p><strong>Top Tracks API</strong> - pulls your top tracks from the Spotify API to show off your favorite artists</p>
+</li>
+<li>
+<p><strong>Quotes API</strong> - manage your favorite lyrics, quotes, or adages and share that wisdom with the world</p>
+</li>
+<li>
+<p><strong>Guestbook</strong> - see who has stopped by your site and left a message</p>
+</li>
+</ul>
+<h2 id="planned-widgets">Planned Widgets</h2>
+<ul>
+<li>
+<p><strong>Lyrics Comments</strong> - use Genius to link top tracks to their lyrics and meaning</p>
+</li>
+<li>
+<p><strong>Comment Section</strong> - create an interactive comment section for your static site</p>
+</li>
+<li>
+<p><strong>Chalkboard</strong> - realtime community drawing board </p>
+</li>
+<li>
+<p><strong>Chatroom</strong> - talk with others, old-internet-style</p>
+</li>
+<li>
+<p><strong>Picture Carousel</strong> - display some of your favorite pictures in an interactive carousel component</p>
+</li>
+<li>
+<p><strong>Message in a Bottle</strong> - read and write a message to a random visitor</p>
+</li>
+<li>
+<p><strong>Live Polls &amp; Graphs</strong> - engage with your audience concerning a specific topic</p>
+</li>
+</ul>
+<h2 id="installation-and-setup">Installation and Setup</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><a href="https://nodejs.org/en/download">nodejs</a></li>
+<li><a href="https://www.npmjs.com/">npm</a></li>
+<li><a href="https://developers.cloudflare.com/workers/wrangler/install-and-update/">Cloudflare Wrangler</a></li>
+<li><a href="https://doc.rust-lang.org/cargo/getting-started/installation.html">Rust Cargo and Rustup</a></li>
+<li><a href="https://htmx.org/">HTMX</a> - you must add this to your static site HTML files.</li>
+</ul>
+<h2 id="spotify-top-tracks">Spotify Top Tracks</h2>
+<ol>
+<li>
+<p>You will need to obtain a Spotify refresh token. In the future, I plan to add a script to pull this automatically, but in the meantime you must procure this yourself.</p>
+</li>
+<li>
+<p>Rename <code>wrangler_template.toml</code> file to <code>wrangler.toml</code>.</p>
+</li>
+<li>
+<p>Setup Cloudflare KV storage, creating a store named SPOTIFY_TOP_ARTISTS, and update your <code>wrangler.toml</code> file with the relevant connection information in the spotify-top-tracks widget directory.</p>
+</li>
+<li>
+<p>Use <code>wrangler secret put &lt;ITEMNAME&gt;</code> to push the following secrets <code>SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_REDIRECT_URI, SPOTIFY_REFRESH_TOKEN</code>, entering in your Spotify API credentials.</p>
+</li>
+<li>
+<p>Run <code>wrangler deploy</code> in the spotify-top-tracks widget directory to push the your Cloudflare worker to production.</p>
+</li>
+<li>
+<p>Edit route rules in the Cloudflare dashboard. <code>Compute &gt; Workers &amp; Pages &gt; spotify-top-tracks</code></p>
+</li>
+<li>
+<p>Add the following HTMX widget to your website.</p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;!-- Spotify Top Songs --&gt;
+&lt;div 
+  hx-get=&quot;https://mattmarsico.com/api/top-tracks&quot;
+  hx-trigger=&quot;load&quot;
+  hx-swap=&quot;outerHTML&quot;
+&gt;&lt;p&gt;Loading top tracks...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="guestbook">Guestbook</h2>
+<ol>
+<li>
+<p>Rename <code>wrangler_template.toml</code> file to <code>wrangler.toml</code>.</p>
+</li>
+<li>
+<p>Create the D1 SQL database with <code>wrangler d1 create guestbook</code></p>
+</li>
+<li>
+<p>Copy the connection info into your <code>wrangler.toml</code></p>
+</li>
+<li>
+<p>Populate the database with the schema by running <code>wrangler d1 execute guestbook --file=./guestbook_schema.sql --remote</code>.</p>
+</li>
+<li>
+<p>Add the following HTMX widget to your website.</p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;div class=&quot;guestbook&quot;&gt;
+  &lt;div class=&quot;guestbook-entries&quot;
+    hx-get=&quot;/api/guestbook?page=0&quot;
+    hx-trigger=&quot;load&quot;&gt;
+    Loading guestbook...
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="quotes">Quotes</h2>
+<p>Note that this widget requires some additional setup steps and leaves others more open-ended. It uses a D1 SQL database to store quotes, allowing to introduce your own method of adding quotes beyond the process given. </p>
+<p>The easiest way to add quotes is to write them in <code>quotes.md</code>. The formatting of the file is <code>body|source_media|writer</code> with the source media being something like a song, book, article, etc; and writer being like an artist, band, author, etc.</p>
+<ol>
+<li>
+<p>Rename <code>wrangler_template.toml</code> file to <code>wrangler.toml</code>.</p>
+</li>
+<li>
+<p>Create the Cloudflare D1 SQL database with <code>wrangler d1 create quotes</code></p>
+</li>
+<li>
+<p>Copy the D1 connection info into your <code>wrangler.toml</code> file</p>
+</li>
+<li>
+<p>Add your own quotes to <code>quotes.md</code></p>
+</li>
+<li>
+<p>Run the provided script <code>generate_schema_with_quotes.py</code> to produce a <code>quotes_schema.sql</code> file.</p>
+</li>
+<li>
+<p>Populate the database with the schema and your quotes by running <code>wrangler d1 execute quotes --file=./quotes_schema.sql --remote</code></p>
+</li>
+<li>
+<p>Deploy the Cloudflare worker with <code>wrangler deploy</code></p>
+</li>
+<li>
+<p>Finally, add the following HTMX widget to your website.</p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;!-- quotes widget --&gt;
+&lt;div 
+  hx-get=&quot;https://mattmarsico.com/api/quote&quot;
+  hx-trigger=&quot;load&quot;
+  hx-swap=&quot;outerHTML&quot;
+&gt;&lt;p&gt;Loading a quote...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="screenshots">Screenshots</h2>
+<p><img alt="Portfolio Website Screenshot" src="screenshot.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-03-01 07:19:16.365797+00:00
+-->
