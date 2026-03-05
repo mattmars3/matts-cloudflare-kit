@@ -26,6 +26,8 @@ Message in a Bottle - Read and Write a Message to a Stranger
 
 Live Polls & Graphs - interact with your audience about a specific topic
 
+Rose-tinted glasses - apply a filter to the entire website view
+
 ## Screenshots
 <img src="docs/screenshot.png" width="500" alt="Screenshot Example">
 

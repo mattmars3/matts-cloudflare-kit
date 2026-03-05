@@ -17,6 +17,10 @@ pub async fn main(req: Request, env: Env, _ctx: worker::Context) -> Result<Respo
                 return Response::from_html("<p>Must provide the message post field</p>");
             };
 
+            // no XSS allowed here
+            let name = htmlescape::encode_minimal(&name);
+            let message = htmlescape::encode_minimal(&message);
+
             let sign_req = Signature {
                 name: name.clone(),
                 message: message.clone(),

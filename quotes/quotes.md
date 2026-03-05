@@ -23,3 +23,4 @@ Are you gonna stand around until 2012 AD? What are you waiting for, a certain sh
 Is all the world jails and churches?|Vietnow|Rage Against The Machine
 I don't wanna waste my time, become another casualty of society. I'll never fall in line, become a victim of your conformity and back down|Fat Lip|Sum 41
 When was it that you sold your life or wasted, every bite of that small slice you never tasted?|Mr. Chainsaw|Alkaline Trio
+Mother, can you keep them in the dark for life? Can you hide them from the waiting world?|Mother|Danzig
