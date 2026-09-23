@@ -81,9 +81,9 @@ pub async fn refresh_tracks(
     env: worker::Env,
     kv_handle: &KvStore,
 ) -> std::result::Result<Vec<DisplayTopTrack>, worker::Error> {
-    let spotify_handle = get_spotify_api_handle(&env).await?;
+    let (spotify_handle, top_tracks_term) = get_spotify_api_handle_and_term(&env).await?;
 
-    let mut top_tracks_stream = spotify_handle.current_user_top_tracks(Some(TimeRange::ShortTerm));
+    let mut top_tracks_stream = spotify_handle.current_user_top_tracks(Some(top_tracks_term));
 
     let mut top_tracks_collection: Vec<DisplayTopTrack> = vec![];
 
@@ -170,6 +170,7 @@ pub struct SpotifySecrets {
     pub spotify_client_secret: String,
     pub spotify_refresh_token: String,
     pub spotify_redirect_uri: String,
+    spotify_top_tracks_term: String,
 }
 
 impl SpotifySecrets {
@@ -180,6 +181,7 @@ impl SpotifySecrets {
         let spotify_client_secret = env.secret("SPOTIFY_CLIENT_SECRET")?.to_string();
         let spotify_redirect_uri = env.secret("SPOTIFY_REDIRECT_URI")?.to_string();
         let spotify_refresh_token = env.secret("SPOTIFY_REFRESH_TOKEN")?.to_string();
+        let spotify_top_tracks_term = env.secret("SPOTIFY_TOP_TRACKS_TERM")?.to_string();
         console_log!("Found all spotify api secrets");
 
         Ok(SpotifySecrets {
@@ -187,15 +189,25 @@ impl SpotifySecrets {
             spotify_client_secret,
             spotify_refresh_token,
             spotify_redirect_uri,
+            spotify_top_tracks_term
         })
+    }
+
+    pub fn top_tracks_term(&self) -> TimeRange {
+        match self.spotify_top_tracks_term.as_str() {
+            "short_term" => TimeRange::ShortTerm,
+            "medium_term" => TimeRange::MediumTerm,
+            "long_term" => TimeRange::LongTerm,
+            _ => TimeRange::MediumTerm
+        }
     }
 }
 
 /// Performs all necessary token refreshing and creates an instance of AuthCodeSpotify for use in
 /// API endpoints
-async fn get_spotify_api_handle(
+async fn get_spotify_api_handle_and_term(
     env: &worker::Env,
-) -> std::result::Result<AuthCodeSpotify, worker::Error> {
+) -> std::result::Result<(AuthCodeSpotify, TimeRange), worker::Error> {
     // obtain spotify secrets and propogate error if failed
     let spotify_secrets = match SpotifySecrets::from_secret_store(env) {
         Ok(secrets) => secrets,
@@ -204,6 +216,8 @@ async fn get_spotify_api_handle(
             return Err(worker_error);
         }
     };
+
+    let top_tracks_term = spotify_secrets.top_tracks_term();
 
     let spotify_credentials = Credentials::new(
         &spotify_secrets.spotify_client_id,
@@ -246,7 +260,7 @@ async fn get_spotify_api_handle(
 
     console_log!("Successfully refreshed spotify token");
 
-    Ok(spotify)
+    Ok((spotify, top_tracks_term))
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
